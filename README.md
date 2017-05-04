@@ -1,1 +1,3 @@
-com_roedel2
+#com_roedel2
+
+A Joomla component
