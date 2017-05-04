@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="Roedel2 Groep" option="View">
+        <message>
+            Roedel2 Enkele groep
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset 
+            name="basic"
+            label="Roedel2Groep">
+            <field
+                name="id"
+                type="sql"
+                label="Groep"
+                require="true"
+                description="Kies een roedel2 groep"
+                query="SELECT id AS value, name AS id FROM google_groups"
+            >
+            </field>
+            <field name="show_header" type="radio" default="1" label="Toon titel" description="">
+                <option value="1">Met h1 tag</option>
+                <option value="2">Met h2 tag</option>
+                <option value="3">Met h3 tag</option>
+                <option value="0">Niet tonen</option>
+            </field>
+            <field name="show_teamfoto" type="radio" default="1" label="Toon teamfoto" description="">
+                <option value="1">Indien beschikbaar</option>
+                <option value="0">Nooit</option>
+            </field>
+            <field name="show_groupmail" type="radio" default="1" label="Toon lijst-email" description="">
+                <option value="1">Indien ingelogd</option>
+                <option value="0">Nooit</option>
+            </field>
+            <field name="page_width" type="radio" default="4" label="Pagina breedte" description="">
+                <option value="3">Smal</option>
+                <option value="4">Breed</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

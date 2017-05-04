@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_ROEDEL_FORM_LBL_GROEP_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="group_id" type="usergroup"
+                
+            label="COM_ROEDEL_FORM_LBL_GROEP_GROUP_ID"
+            description="COM_ROEDEL_FORM_DESC_GROEP_GROUP_ID" 
+                
+                
+                 required="true" 
+            multiple="false" /> 
+
+ 
+		<field name="email" type="email" label="Email (WAAR)" description="" validate="email"  required="true" /> 
+
+       <field name="foto" type="media"
+                
+            label="Icoon/afbeelding"
+                
+                
+                
+            directory="/" /> 
+
+       <field name="teamfoto" type="media"
+                
+            label="Teamfoto"
+                
+                
+                
+            directory="/" /> 
+       
+       <field name="desc" type="textarea"
+                
+            label="COM_ROEDEL_FORM_LBL_GROEP_DESC"
+            description="COM_ROEDEL_FORM_DESC_GROEP_DESC" 
+                
+                
+                
+            cols="100"
+            rows="8"
+            filter="html" /> 
+      
+        <field name="teamleider_label" type="text"
+                
+            label="Teamleider label"
+            description="Andere naam voor teamleider. Indien leeg gewoon 'teamleider'" 
+                
+                
+                 /> 
+
+       <field name="teamleider" type="user"
+                
+            label="COM_ROEDEL_FORM_LBL_GROEP_TEAMLEIDER"
+            description="COM_ROEDEL_FORM_DESC_GROEP_TEAMLEIDER" 
+                
+                
+                 /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+             
+              <field name="order" type="text"
+                
+            label="Volgorde"
+                
+                
+                 /> 
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field>
+
+	</fieldset>
+
+</form>

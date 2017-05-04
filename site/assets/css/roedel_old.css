@@ -1,0 +1,172 @@
+.group{
+    clear: both;
+    margin: 15px 0px;
+    overflow: hidden;
+}
+
+.member {
+    background-color: #ddd;
+    margin: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    float: left;
+    height: 180px;
+    text-align: center;
+}
+
+.member p.icons{
+    visibility: hidden;
+}
+
+.member:hover p.icons{
+    visibility: visible;
+}
+
+@media not print {
+    @media (min-width: 768px) {
+
+        .members3 .member {
+            width: 27%;
+        }
+
+        .members3 .member:nth-child(3n+0) {
+            margin-right: 0px;
+        }
+
+        .members3 .member:nth-child(3n-2) {
+            margin-left: 0px;
+        }
+
+        .members4 .member {
+            width: 20%;
+        }
+
+        .members4 .member:nth-child(4n+0) {
+            margin-right: 0px;
+        }
+
+        .members4 .member:nth-child(4n-3) {
+            margin-left: 0px;
+        }
+    }
+}
+
+.member img, .roedel_profile_left{
+    max-width: 96px;
+    max-height:96px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.roedel_profile_left{
+    float: right;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    box-shadow: 3px 3px 4px #666;
+}
+
+.groupphoto img{
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    box-shadow: 3px 3px 4px #666;
+    max-width: 420px;
+}
+
+.member p{
+    font-size: 8pt;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.grouplist li .icon-share{
+    visibility: hidden;
+}
+
+.grouplist li:hover .icon-share{
+    visibility: visible;
+}
+
+@media (max-width: 767px){
+    .member{
+        width: 37%;
+    }
+
+    .rt-block{
+        padding: 10px 5px !important;
+        margin: 10px 5px !important;
+    }
+}
+
+@media print{
+
+    @media (max-width: 767px) {
+
+        .member{
+            width: 20% !important;
+        }
+
+        .member:nth-child(4n+0) {
+            margin-right: 0px !important;
+        }
+
+        .member:nth-child(4n-3) {
+            margin-left: 0px !important;
+        }
+
+    }
+
+    @media (min-width: 767px) {
+
+        .member{
+            width: 13% !important;
+        }
+
+        .member:nth-child(6n+0) {
+            margin-right: 0px !important;
+        }
+
+        .member:nth-child(6n-5) {
+            margin-left: 0px !important;
+        }
+
+    }
+
+    .member{
+        background-color: white;
+        border: 1px solid black;
+        page-break-inside: avoid;
+        height: 155px;
+    }
+
+    .rt-container, .rt-push-3{
+        width: 100% !important;
+    }
+
+    .rt-block{
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    h1, a{
+        color: black !important;
+    }
+
+    .group{
+        page-break-inside: avoid;
+    }
+
+    body{
+        background-color: white !important;
+    }
+
+    div.allteams, p.icons{
+        display: none;
+    }
+}

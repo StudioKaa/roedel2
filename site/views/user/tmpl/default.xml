@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Roedel2 Gebruiker" option="View">
+        <message>
+            Roedel2 Enkele gebruiker
+        </message>
+	</layout>
+    <fields name="params">
+        <fieldset
+                name="basic"
+                label="Gebruiker">
+            <field
+                    name="id"
+                    type="sql"
+                    label="Gebruiker"
+                    require="true"
+                    description="Kies een roedel2 gebruiker"
+                    query="SELECT id, fullName AS value FROM google_users"
+            >
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

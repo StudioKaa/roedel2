@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_roedel2</name>
+    <creationDate>2016-12-14</creationDate>
+    <copyright>Copyright (C) 2014. Alle rechten voorbehouden.</copyright>
+    <license>GNU General Public License versie 2 of hoger; Zie LICENSE.txt</license>
+    <author>Bart Roos</author>
+    <authorEmail>bart@studiokaa.co</authorEmail>
+    <authorUrl>http://studiokaa.co</authorUrl>
+    <version>2.0.1</version>
+    <description>Roedel organiseert gebruikers en contacten.</description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>roedel2.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="site">
+        
+			<language tag="nl-NL">language/nl-NL/nl-NL.com_roedel2.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_roedel2.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_roedel/assets/images/s_com_roedel2.png" >COM_ROEDEL2</menu>
+        <submenu>
+            
+			<menu link="option=com_roedel2&amp;view=groepen" view="groepen" img="components/com_roedel2/assets/images/s_groepen.png" alt="Roedel2/Groepen">COM_ROEDEL2_TITLE_GROEPEN</menu>
+                        <menu link="option=com_roedel2&amp;view=gebruikers" view="gebruikers" img="components2/com_roedel/assets/images/s_groepen.png" alt="Roedel2/Gebruikers">COM_ROEDEL2_TITLE_GEBRUIKERS</menu>
+
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>roedel2.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>language</folder>
+        </files>
+        <languages folder="administrator">
+            
+			<language tag="nl-NL">language/nl-NL/nl-NL.com_roedel2.ini</language>
+			<language tag="nl-NL">language/nl-NL/nl-NL.com_roedel2.sys.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_roedel2.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_roedel2.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="roedel2"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->
